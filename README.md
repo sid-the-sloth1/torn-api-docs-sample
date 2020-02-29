@@ -41,12 +41,15 @@ You can make a maximum of 100 API calls per minute to the server, trying to exce
 
 
 ### Classes
- Class means objects having same type of properties.Torn API has 4 classes of API requests. These classes are:
+ Class means objects having same type of properties.Torn API has 6 classes of API requests. These classes are:
 
 - [User](#user): To request data related to a user's profile.
+
+- [Properties](#properties): To request data about properties.
+
 - [Faction](#faction): To request information about a faction and it's members.
 - [Company](#company): To get information about a company and it's employees.
-- [Market](#market): To get information about Bazaar, Item Market and Points Market.
+- [Item Market](#item-market): To get information about Bazaar, Item Market and Points Market.
 - [Torn](#torn): To get information related to Torn as a whole. It includes ***Stocks***, Gyms, Rackets, Items etc.
 
 
