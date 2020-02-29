@@ -79,10 +79,12 @@ Currently only **attacks**,  **attacksfull** , **revives**, **revivesfull**, **e
 
 ## profile
 
-This field returns information about ***Rank***, ***Level***, ***Life***, ***Hospital and jail time***, ***current status***, ***faction and company info***, ***icons*** etc of a user
+This field returns information about ***Rank***, ***Level***, ***Life***, ***Hospital and jail time***, ***current status***, ***faction and company info***, ***icons*** etc of a user.
 
 ```
 https://api.torn.com/user/1?selections=profile&key=
 ```
-It will return JSON data that looks like 
+It will return JSON data as shown [here](sample/User_profile.json)
+
+
 
