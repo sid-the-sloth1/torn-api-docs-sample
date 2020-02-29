@@ -1,0 +1,67 @@
+{
+	"rank": "Celebrity Medalist",
+	"level": 16,
+	"gender": "Male",
+	"property": "Private Island",
+	"signup": "2004-11-15 12:22:16",
+	"awards": 796,
+	"friends": 1320,
+	"enemies": 242,
+	"forum_posts": 19581,
+	"karma": 27304,
+	"age": 5583,
+	"role": "Admin",
+	"donator": 1,
+	"player_id": 1,
+	"name": "Chedburn",
+	"property_id": 377810,
+	"life": {
+		"current": 742,
+		"maximum": 742,
+		"increment": 37,
+		"interval": 300,
+		"ticktime": 5,
+		"fulltime": 0
+	},
+	"status": {
+		"description": "Okay",
+		"details": "",
+		"state": "Okay",
+		"color": "green",
+		"until": 0
+	},
+	"job": {
+		"position": "Director",
+		"company_id": 79286,
+		"company_name": "Chedtest123"
+	},
+	"faction": {
+		"position": "Leader",
+		"faction_id": 42113,
+		"days_in_faction": 424,
+		"faction_name": "Test123"
+	},
+	"married": {
+		"spouse_id": 1630641,
+		"spouse_name": "Maxorcie",
+		"duration": 2030
+	},
+	"basicicons": {
+		"icon6": "Male",
+		"icon3": "Donator",
+		"icon11": "Staff - Admin",
+		"icon10": "Player Committee - Member",
+		"icon8": "Married - To Maxorcie",
+		"icon73": "Company - Director of Chedtest123 (Logistics Management)",
+		"icon74": "Faction - Leader of Test123"
+	},
+	"states": {
+		"hospital_timestamp": 0,
+		"jail_timestamp": 0
+	},
+	"last_action": {
+		"status": "Idle",
+		"timestamp": 1582921463,
+		"relative": "3 hours ago"
+	}
+}
