@@ -1,4 +1,4 @@
-##User API Docs
+## User API Docs
 ```
 https://api.torn.com/user/user_id?selections=fields_you_want_to_call&key=
 ```
@@ -37,7 +37,7 @@ Currently only **attacks**,  **attacksfull** , **revives**, **revivesfull**, **e
 
 
 # Reference
-- [profile](#profile-field)
+- [profile](#profile)
 - networth
 -  bazaar
 -  display
@@ -77,7 +77,7 @@ Currently only **attacks**,  **attacksfull** , **revives**, **revivesfull**, **e
 -  timestamp
 
 
-## profile field
+## profile
 
 This field returns information about ***Rank***, ***Level***, ***Life***, ***Hospital and jail time***, ***current status***, ***faction and company info***, ***icons*** etc of a user
 
