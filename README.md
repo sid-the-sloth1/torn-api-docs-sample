@@ -65,7 +65,7 @@ https://api.torn.com/user/user_id?selections=fields_you_want_to_call&key=
 
 - Replace **user_id** with the User ID of the player you want to get info about.
 
-- Replace **fields_you_want_to_call** with the selection fields that you want to call. Yes, you can multiple fields for same user in a single call, but you can call more than one users in one call.
+- Replace **fields_you_want_to_call** with the selection fields that you want to call. Yes, you can multiple fields for same user in a single call, but you can't call more than one users in one call.
 
 **Notes:**
 
@@ -178,4 +178,167 @@ https://api.torn.com/user/1615969?selections=display&key=
 This method returns an **array of objects** containing ***Name, type, quantity, circulation and market value*** of the items a user has in their Display Case. 
 Sample data returned by this call can be found [here](sample/User_display.json).
 
-#### 
+
+
+#### inventory
+This is a private call, means you **cannot** request this data for another user, if you do try you will be met with **Error Code 7**.
+
+```
+https://api.torn.com/user/?selections=inventory&key=
+```
+
+Calling this method returns an **array of objects** containing information about ***Items in your inventory, their market price, quantity and whether you have them currently equipped or not.*** Sample data that is returned by calling it can be found [here](sample/User_inventory.json).
+
+
+#### hof
+
+This method is used to get your ranks in **Hall of Fame** under various categories. It is a private call, means you can't access this data for another user, If you try to do so then you will be met with **Error code 7**.
+
+```
+https://api.torn.com/user/?selections=hof&key=
+```
+It returns a JSON string containing your rank and value in various Hall of Fame categories. Sample data returned by this method can be found [here](sample/User_hof.json).
+
+
+#### travel
+
+This call is used to request data about your remaining travel time. This is a private call, means trying to get this data for another user will get you Error Code 7.
+```
+https://api.torn.com/user/?selections=travel&key=
+```
+
+Sample data returned from this method looks like this.
+
+```
+"travel": {
+		"destination": "Switzerland",
+		"timestamp": 1583027728,
+		"departed": 158302727,
+		"time_left": 7294
+	}
+}
+```
+ **timestamp** represents the instant when you will reach your destination and  **time_left** tells how many seconds away from your destination you are.
+
+#### events
+
+This call lets you access your events. It shows last 100 events(maybe less if you are using ```from``` and ```to``` parameters. This is a private call and trying to access this information for other user will get you **Error Code 7**.
+
+```
+https://api.torn.com/user/?selections=events&key=
+```
+
+This call supports ```from``` and ``` to``` parameters.
+
+
+#### receivedevents
+
+This is a fairly new method added into the API. It let's you access the events that you have received from other players. This is a private call and trying to access this information for other user will get you **Error Code 7**.
+
+```
+https://api.torn.com/user/?selections=receivedevents&key=
+```
+
+This call supports ```from``` and ``` to``` parameters.
+
+
+#### messages
+
+This method is used to request the mails received by you. Again, it's a private call and you can't access this data for another user, but if you do try to call other user's message then you will get  **Error Code 7.** 
+```
+https://api.torn.com/user/?selections=messages&key=
+```
+
+
+#### education
+
+This method returns information about the education course that you are currently taking and the courses that you have already finished.
+
+```
+https://api.torn.com/user/?selections=education&key=
+```
+It returns data that looks like this:
+```
+{
+  "education_current": 39,
+  "education_timeleft": 990,
+  "education_completed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}
+```
+ **education_current** represents the code of current education course you are taking.
+ **education_timeleft** represents the time remaining for the current education course you are taking (in seconds).
+
+ **education_completed** returns an  **array** including the code of the education courses you have already finished.
+
+#### medals
+
+This call returns information about **medals you have received**. It is a private call and trying to get this information for another user will get Error Code 7.
+
+```
+https://api.torn.com/user/?selections=medals&key=
+```
+The call returns data that looks like:
+```
+{
+  "medals_awarded": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "medals_time": [
+    1555292998,
+    1540708126,
+    1530367856,
+    1530230510,
+    1531961560
+  ]
+}
+```
+
+ **medals_awarded** represents an array of the code of medals that you have received and  **medals_time** shows the Epoch Timestamp of when you received the medal, in the same order.
+
+#### honors
+
+This call us used to get information about "Honors" received by a user. Just like the [medals](#medals) call it is also a private call and you can not request this data for another user.
+
+```
+https://api.torn.com/user/?selections=honors&key=
+```
+It returns data that looks like:
+```
+{
+  "honors_awarded": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "honors_time": [
+    1555292998,
+    1540708126,
+    1530367856,
+    1530230510,
+    1531961560
+  ]
+}
+```
+
+
+ **honors_awarded** represents an **array** containing the codes of  **honors** that you have received. 
+
+And the element at the same index in **honors_time** array represents the Epoch Timestamp of the instant when user received the honor.
+
+
+
+
+
